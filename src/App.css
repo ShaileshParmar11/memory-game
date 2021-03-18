@@ -1,23 +1,68 @@
-.board{
+.board-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  margin-top: 60px;
+}
+
+.board-game{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 39%;
+}
+
+.board-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
 .board-heading{
-  text-align: center;
   font-size: 50px;
-  margin: 20px;
+  margin: 20px 0;
+      
 }
 
+.score {
+  font-size: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.50em 1.5em;
+  border: 0.1em solid #FFFFFF;
+  margin: auto 1px;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-align: center;
+  transition: all 0.2s;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  }
+
+.btn:hover{
+  color:#282c34;
+  background-color:#FFFFFF;
+  }
+
+  .btn:disabled {
+    cursor: not-allowed;
+  }
 
 
 /* flip card */
 
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
   perspective: 1000px;
   margin: 10px;
   cursor: pointer;
@@ -28,9 +73,13 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s;
+  transition: transform 0.2s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  -webkit-transition: transform 0.2s;
+  -moz-transition: transform 0.2s;
+  -ms-transition: transform 0.2s;
+  -o-transition: transform 0.2s;
 }
 
 .flip {
@@ -69,6 +118,42 @@
 }
 
 .flip-card-back h1{
-font-size: 100px;
+font-size: 60px;
   
+}
+.winnerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.winnerContainer button{
+  margin: 20px auto;
+}
+
+.winnerGif{
+  pointer-events: none;
+  width: 480px;
+  height: 480px;
+  border: none;
+  display: block;
+}
+
+@media screen and (max-width: 1199px) {
+  .board-game{
+    width: 60%;
+  }
+
+  .board-body{
+    height: fit-content;
+  }
+}
+@media screen and (max-width: 796px) {
+  .board-game{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .board-game{
+    width: 100%;
+  }
 }
