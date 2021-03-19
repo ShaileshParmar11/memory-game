@@ -1,32 +1,78 @@
+.game-start-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-input-container{
+  padding: 40px;
+  border: 2px solid;
+  border-radius: 8px;
+}
+
 .board-body{
   display: flex;
   justify-content: center;
   align-items: center;
   height: fit-content;
-  margin-top: 60px;
+  margin-top: 28px;
 }
 
 .board-game{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 39%;
+  width: 500px;
 }
 
-.board-header{
+.hard-board {
+  width: 800px;
+}
+
+.board-header, .levels{
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 4%;
 }
 
 .board-heading{
-  font-size: 50px;
-  margin: 20px 0;
+  font-size: 30px;
+  margin: 5px 0;
       
 }
 
 .score {
-  font-size: 30px;
+  font-size: 20px;
+}
+
+.levels{
+  margin: 20px 0;
+}
+
+form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-input-container form {
+  margin-top: 40px;
+}
+
+form input{
+   margin-right: 12px;
+    width: 100px;
+    height: 25px;
+}
+
+form input[type="text"]{
+  width: 200px;
+}
+
+form label{
+  margin-right: 12px;
+  font-size: 18px;
 }
 
 .btn {
@@ -34,18 +80,18 @@
   padding: 0.50em 1.5em;
   border: 0.1em solid #FFFFFF;
   margin: auto 1px;
-  border-radius: 0.12em;
+  border-radius: 0.5em;
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Roboto',sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   color: #FFFFFF;
   text-align: center;
   transition: all 0.2s;
   background: transparent;
   font-size: 16px;
   cursor: pointer;
-  }
+}
 
 .btn:hover{
   color:#282c34;
@@ -137,6 +183,7 @@ font-size: 60px;
   border: none;
   display: block;
 }
+
 
 @media screen and (max-width: 1199px) {
   .board-game{
